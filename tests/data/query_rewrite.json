@@ -1,0 +1,100 @@
+[
+  {
+    "id": "pro_storage",
+    "smoke": true,
+    "history": [
+      {
+        "role": "user",
+        "content": "What does the Pro plan cost?"
+      },
+      {
+        "role": "assistant",
+        "content": "Pro costs $12 per user per month billed annually, or $15 billed monthly."
+      }
+    ],
+    "message": "How much storage does it include?",
+    "must_contain": [
+      "pro",
+      "storage"
+    ]
+  },
+  {
+    "id": "business_price",
+    "history": [
+      {
+        "role": "user",
+        "content": "Which plan includes time tracking?"
+      },
+      {
+        "role": "assistant",
+        "content": "Time tracking is available on the Business and Enterprise plans."
+      }
+    ],
+    "message": "How much is the cheaper of those per user?",
+    "must_contain": [
+      "business"
+    ]
+  },
+  {
+    "id": "webhook_retries",
+    "history": [
+      {
+        "role": "user",
+        "content": "How do Orbitly webhooks work?"
+      },
+      {
+        "role": "assistant",
+        "content": "Webhooks send an HTTP POST to your endpoint when tasks, projects or comments change."
+      }
+    ],
+    "message": "How many times are failed ones retried?",
+    "must_contain": [
+      "webhook",
+      "retr"
+    ]
+  },
+  {
+    "id": "data_residency_australia",
+    "history": [
+      {
+        "role": "user",
+        "content": "Can we store our data in the EU?"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes, Enterprise customers can store data in the EU (Frankfurt)."
+      }
+    ],
+    "message": "What about Australia?",
+    "must_contain": [
+      "australia",
+      "data"
+    ]
+  },
+  {
+    "id": "lockout_wait",
+    "history": [
+      {
+        "role": "user",
+        "content": "My account got locked after too many failed logins."
+      },
+      {
+        "role": "assistant",
+        "content": "After 10 failed attempts the account is locked for 15 minutes."
+      }
+    ],
+    "message": "How long until I can try again?",
+    "must_contain": [
+      "lock"
+    ]
+  },
+  {
+    "id": "standalone_passthrough",
+    "history": [],
+    "message": "What is the API rate limit on the Pro plan?",
+    "must_contain": [
+      "rate limit",
+      "pro"
+    ]
+  }
+]

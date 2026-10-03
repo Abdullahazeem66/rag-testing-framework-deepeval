@@ -1,0 +1,43 @@
+[
+  {
+    "name": "plan_upgrade_for_time_tracking",
+    "scenario": "A user compares plans and follows up with questions that refer back to earlier answers.",
+    "turns": [
+      "What does the Pro plan cost?",
+      "Does it include time tracking?",
+      "Which plan do I need for that then, and how much is it per user if billed annually?"
+    ],
+    "expected_outcome": "The user learns that Pro costs $12 per user per month annually or $15 monthly, that time tracking is not included in Pro, and that the Business plan ($24 per user per month billed annually) is needed.",
+    "smoke": true
+  },
+  {
+    "name": "annual_refund",
+    "scenario": "A customer who bought an annual plan asks about refunds across two hypothetical timelines.",
+    "turns": [
+      "I bought an annual Pro subscription 3 weeks ago.",
+      "Can I get my money back if I cancel now?",
+      "And what if it had been 2 months instead?"
+    ],
+    "expected_outcome": "The user learns they can get a full refund because they are within 30 days of purchase, and that after 2 months the annual plan would not be refundable but would remain active until the end of the paid term."
+  },
+  {
+    "name": "api_developer",
+    "scenario": "A developer building an integration asks about authentication, token lifetime and webhook failures.",
+    "turns": [
+      "I'm building an integration with your API. How do I authenticate?",
+      "How long do those tokens last?",
+      "My webhook endpoint was down for a few hours. What happens to the events?"
+    ],
+    "expected_outcome": "The user learns to authenticate with a personal access token sent as a Bearer token, that tokens expire after 90 days, and that failed webhook deliveries are retried up to 5 times with exponential backoff over 24 hours before the webhook is disabled."
+  },
+  {
+    "name": "account_lockout",
+    "scenario": "A locked-out user asks how to regain access and then asks about enforcing 2FA.",
+    "turns": [
+      "I can't log in, it says my account is locked.",
+      "How long do I have to wait?",
+      "Once I'm back in, can my admin force everyone on our team to use 2FA?"
+    ],
+    "expected_outcome": "The user learns the account is locked for 15 minutes after 10 failed attempts and can also reset the password, and that admins on Pro and above can require 2FA for all members."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "gen_conv_001",
+    "scenario": "An Orbitly customer chats with Orbi after repeated sign-in failures lock their account. Over several turns, Orbi explains that 10 consecutive failed attempts trigger a 15-minute lockout, distinct from the session timeout after a successful sign-in, which is 30 days by default or can be set by Business or Enterprise admins from 1 hour to 90 days.",
+    "expected_outcome": "The customer learns that 10 consecutive failed sign-in attempts trigger a 15-minute account lockout, while session timeout applies after sign-in and is 30 days by default or configurable by Business and Enterprise admins from 1 hour to 90 days.",
+    "user_description": null
+  },
+  {
+    "id": "gen_conv_002",
+    "scenario": "During a Monday-morning task sync, an Orbitly customer tells Orbi that their REST API calls are returning 429s and asks whether the project-update webhook is failing too. In a multi-turn support chat, they check the 300-requests-per-minute limit and the `Retry-After` header, then verify that the endpoint returns a 2xx response within 10 seconds before agreeing on separate fixes.",
+    "expected_outcome": "The customer learns that their Pro plan allows 300 API requests per minute and that 429 responses include a `Retry-After` header, while webhook deliveries require a 2xx response within 10 seconds; they agree to address the API rate limit and webhook response separately.",
+    "user_description": null
+  },
+  {
+    "id": "gen_conv_003",
+    "scenario": "An Orbitly customer chats with Orbi, Orbitly’s support assistant, to clarify annual refunds and monthly cancellations, invoice eligibility and payment methods, taxes and invoice access, failed-payment consequences, and how plan upgrades, downgrades, and Free plan limits work; Orbi explains the policies and helps resolve the customer’s billing questions over several turns.",
+    "expected_outcome": "The customer learns that annual subscriptions are refundable only within 30 days, monthly cancellations stop the next renewal without a refund, eligible annual Business or Enterprise plans over $5,000 can pay by invoice, accepted payment methods exclude PayPal and cryptocurrency, taxes are added at checkout, invoices are available in Billing settings, failed payments lead to read-only access after a 14-day grace period without data deletion, and upgrades apply immediately while downgrades begin next billing period and may make projects over Free limits read-only.",
+    "user_description": null
+  },
+  {
+    "id": "gen_conv_004",
+    "scenario": "An Orbitly admin chats with Orbi while preparing for an internal review, asking how to export workspace data, how long the emailed download link remains valid, and whether deleting the workspace affects that deadline.",
+    "expected_outcome": "The admin learns that workspace data can be exported as JSON or CSV via Settings > Data > Export, the emailed link is valid for 7 days, and workspace deletion has a separate 14-day recovery window; whether deletion affects the link is not specified.",
+    "user_description": null
+  },
+  {
+    "id": "gen_conv_005",
+    "scenario": "An Orbitly customer chats with Orbi over several turns while setting up a workspace for external reviewers, comparing plans and asking about board and calendar views, Pro+ timelines and custom fields, monthly automation limits and rollover, guest permissions and limits, and Business or Enterprise time tracking and CSV timesheet exports.",
+    "expected_outcome": "The customer learns that Kanban, list, and calendar views are available on all plans; timelines and up to 50 custom fields per project require Pro or higher; monthly automation limits are 100 on Free, 5,000 on Pro, 50,000 on Business, and unlimited on Enterprise, with no rollover; guests can view and comment but not create projects, with up to 10 on Pro and unlimited on Business or Enterprise, and are unavailable on Free; and Business or Enterprise members can track time and export timesheets as CSV.",
+    "user_description": null
+  },
+  {
+    "id": "gen_conv_006",
+    "scenario": "During Orbitly’s October budget review, a registered nonprofit’s operations lead chats with Orbi about upgrading from Free. They check whether Business includes SAML SSO, audit logs, time tracking, unlimited guests, and 1 TB of storage; compare the $24 annual-billed and $29 monthly-billed per-seat rates; and ask whether the 50% nonprofit discount can be combined with a promotion. Orbi clarifies the plan features, billing options, and discount-stacking rules in a multi-turn support chat.",
+    "expected_outcome": "The operations lead learns that Business includes SAML SSO, audit logs, time tracking, unlimited guests, and 1 TB of storage, costs $24 per seat monthly when billed annually or $29 when billed monthly, and qualifies for the nonprofit 50% discount, which cannot be combined with other promotions.",
+    "user_description": null
+  },
+  {
+    "id": "gen_conv_007",
+    "scenario": "An Orbitly Business customer chats with Orbi after reviewing the status-page incident history, discussing whether a 48-hour-noticed maintenance window counts toward monthly uptime, how the 99.9% SLA and service credits apply, and how support options compare across plans.",
+    "expected_outcome": "The customer learns that announced maintenance does not count as downtime, Business guarantees 99.9% monthly uptime with eligible credits requested within 30 days, and Business support offers priority email and live chat with a four-hour first response five days a week.",
+    "user_description": null
+  },
+  {
+    "id": "gen_conv_008",
+    "scenario": "An Orbitly customer chats with Orbi because email notifications have stopped arriving. Over several turns, they check the inbox and spam folder, verify the Profile > Notifications setting, and investigate whether their mail server allows notifications@orbitly.example. Orbi interprets each result and guides the customer through the next check until they identify and fix the cause.",
+    "expected_outcome": "The customer learns to check spam, enable email notifications under Profile > Notifications, and allow notifications@orbitly.example through their mail server to restore delivery.",
+    "user_description": null
+  }
+]

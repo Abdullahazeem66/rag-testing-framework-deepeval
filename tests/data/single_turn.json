@@ -1,0 +1,176 @@
+[
+  {
+    "id": "business_monthly_price",
+    "input": "How much does the Business plan cost if I pay monthly?",
+    "expected_output": "The Business plan costs $29 per user per month when billed monthly (or $24 per user per month when billed annually).",
+    "expected_docs": [
+      "plans_and_pricing"
+    ],
+    "gold_chunks": [
+      "plans_and_pricing#business-plan"
+    ],
+    "distractor_chunks": [
+      "plans_and_pricing#pro-plan",
+      "billing_and_refunds#changing-plans"
+    ],
+    "smoke": true
+  },
+  {
+    "id": "monthly_refund",
+    "input": "Can I get a refund on a monthly subscription?",
+    "expected_output": "Monthly subscriptions are never refunded; cancelling a monthly plan only stops the next renewal.",
+    "expected_docs": [
+      "billing_and_refunds"
+    ],
+    "gold_chunks": [
+      "billing_and_refunds#refund-policy"
+    ],
+    "distractor_chunks": [
+      "billing_and_refunds#payment-methods",
+      "support_and_sla#service-credits"
+    ]
+  },
+  {
+    "id": "sso_providers",
+    "input": "Which plans have SSO and which identity providers are supported?",
+    "expected_output": "SAML 2.0 SSO is available on the Business and Enterprise plans, with Okta, Microsoft Entra ID (Azure AD) and Google Workspace as supported identity providers.",
+    "expected_docs": [
+      "account_security"
+    ],
+    "gold_chunks": [
+      "account_security#single-sign-on-sso"
+    ],
+    "distractor_chunks": [
+      "account_security#two-factor-authentication"
+    ]
+  },
+  {
+    "id": "trash_retention",
+    "input": "How long do deleted items stay in the trash?",
+    "expected_output": "Deleted items stay in the Trash and can be restored for 30 days, after which they are permanently deleted.",
+    "expected_docs": [
+      "data_retention_and_privacy"
+    ],
+    "gold_chunks": [
+      "data_retention_and_privacy#deleted-items"
+    ],
+    "distractor_chunks": [
+      "data_retention_and_privacy#deleting-a-workspace",
+      "data_retention_and_privacy#backups"
+    ]
+  },
+  {
+    "id": "pro_rate_limit",
+    "input": "What is the API rate limit on the Pro plan and what happens if I exceed it?",
+    "expected_output": "Pro allows 300 API requests per minute. Exceeding it returns HTTP 429 with a Retry-After header.",
+    "expected_docs": [
+      "api_and_integrations"
+    ],
+    "gold_chunks": [
+      "api_and_integrations#rate-limits"
+    ],
+    "distractor_chunks": [
+      "api_and_integrations#webhooks"
+    ]
+  },
+  {
+    "id": "business_support_time",
+    "input": "How fast does support respond for Business customers?",
+    "expected_output": "Business customers get priority email and live chat support with a first response within 4 hours, 24 hours a day, 5 days a week.",
+    "expected_docs": [
+      "support_and_sla"
+    ],
+    "gold_chunks": [
+      "support_and_sla#support-channels-by-plan"
+    ],
+    "distractor_chunks": [
+      "support_and_sla#uptime-sla"
+    ]
+  },
+  {
+    "id": "pro_automations",
+    "input": "How many automation runs do I get on Pro, and do unused runs roll over?",
+    "expected_output": "Pro includes 5,000 automation runs per month, and unused runs do not roll over to the next month.",
+    "expected_docs": [
+      "features_guide"
+    ],
+    "gold_chunks": [
+      "features_guide#automations"
+    ],
+    "distractor_chunks": [
+      "features_guide#custom-fields"
+    ]
+  },
+  {
+    "id": "upload_limit_typo",
+    "input": "whats the max file size i can uplaod on the free plan",
+    "expected_output": "The maximum size for a single file is 25 MB on the Free plan (250 MB on paid plans).",
+    "expected_docs": [
+      "troubleshooting"
+    ],
+    "gold_chunks": [
+      "troubleshooting#file-upload-limits"
+    ],
+    "distractor_chunks": [
+      "plans_and_pricing#free-plan"
+    ]
+  },
+  {
+    "id": "failed_payment",
+    "input": "What happens if my card payment fails?",
+    "expected_output": "Orbitly retries the charge and sends reminders during a 14-day grace period. If payment is still not received, the workspace becomes read-only until the balance is paid; data is never deleted.",
+    "expected_docs": [
+      "billing_and_refunds"
+    ],
+    "gold_chunks": [
+      "billing_and_refunds#failed-payments"
+    ],
+    "distractor_chunks": [
+      "billing_and_refunds#payment-methods"
+    ]
+  },
+  {
+    "id": "eu_data_residency",
+    "input": "Can we keep our data in Europe?",
+    "expected_output": "Yes, but only on the Enterprise plan, which can store data in the European Union (Frankfurt). Other plans store data in the United States.",
+    "expected_docs": [
+      "data_retention_and_privacy"
+    ],
+    "gold_chunks": [
+      "data_retention_and_privacy#data-residency"
+    ],
+    "distractor_chunks": [
+      "data_retention_and_privacy#gdpr"
+    ]
+  },
+  {
+    "id": "multihop_sso_time_tracking",
+    "input": "We need both SSO and time tracking. What's the cheapest plan that has both, and what does it cost per user on annual billing?",
+    "expected_output": "SSO and time tracking are both included in the Business plan, which costs $24 per user per month billed annually.",
+    "expected_docs": [
+      "plans_and_pricing"
+    ],
+    "gold_chunks": [
+      "plans_and_pricing#business-plan"
+    ],
+    "distractor_chunks": [
+      "plans_and_pricing#pro-plan"
+    ],
+    "smoke": true
+  },
+  {
+    "id": "multihop_nonprofit_price",
+    "input": "We're a registered nonprofit and want the Business plan billed annually. What would we pay per user?",
+    "expected_output": "Nonprofits get 50% off, so the Business plan billed annually would be $12 per user per month instead of $24.",
+    "expected_docs": [
+      "plans_and_pricing"
+    ],
+    "gold_chunks": [
+      "plans_and_pricing#business-plan",
+      "plans_and_pricing#discounts"
+    ],
+    "distractor_chunks": [
+      "plans_and_pricing#pro-plan"
+    ]
+  }
+]

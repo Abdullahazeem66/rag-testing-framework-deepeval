@@ -1,0 +1,20 @@
+[
+  {
+    "id": "free_plan_guests",
+    "scenario": "A team lead on the Free plan wants to invite two external clients to view a project and asks what they need to do.",
+    "user_description": "A busy team lead at a small design agency, not very technical.",
+    "expected_outcome": "The user learns guests are not available on the Free plan and that the Pro plan allows up to 10 guests, costing $12 per user per month billed annually or $15 monthly."
+  },
+  {
+    "id": "eu_compliance_admin",
+    "scenario": "An IT admin at a German company is evaluating Orbitly and needs SSO with Okta and data stored in the EU.",
+    "user_description": "A detail-oriented IT administrator focused on compliance.",
+    "expected_outcome": "The user learns that EU data residency (Frankfurt) is only available on Enterprise, that SAML SSO with Okta is supported on Business and Enterprise, and therefore Enterprise is required."
+  },
+  {
+    "id": "desktop_sync_issue",
+    "scenario": "A frustrated user's Orbitly desktop app on Windows has stopped syncing.",
+    "user_description": "An impatient user who writes short messages.",
+    "expected_outcome": "The user is told to open Help > Reset local cache and restart the app, and that the desktop app supports Windows 10 and later."
+  }
+]

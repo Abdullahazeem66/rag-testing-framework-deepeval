@@ -1,0 +1,11 @@
+.env
+data/index/
+reports/
+.deepeval/
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+*.log
+.vscode/
+.idea/

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ceo",
+    "input": "Who is the CEO of Orbitly?",
+    "context_chunks": [
+      "plans_and_pricing#overview",
+      "support_and_sla#support-channels-by-plan"
+    ],
+    "smoke": true
+  },
+  {
+    "id": "dark_mode",
+    "input": "When will Orbitly release dark mode?",
+    "context_chunks": [
+      "features_guide#boards-and-views"
+    ]
+  },
+  {
+    "id": "revenue",
+    "input": "What was Orbitly's annual revenue last year?",
+    "context_chunks": [
+      "plans_and_pricing#overview",
+      "plans_and_pricing#enterprise-plan"
+    ]
+  },
+  {
+    "id": "apple_login",
+    "input": "Can I sign in to Orbitly with my Apple ID?",
+    "context_chunks": [
+      "account_security#single-sign-on-sso",
+      "account_security#passwords"
+    ]
+  },
+  {
+    "id": "max_tasks",
+    "input": "What is the maximum number of tasks allowed in a single project?",
+    "context_chunks": [
+      "features_guide#custom-fields",
+      "plans_and_pricing#free-plan"
+    ]
+  }
+]

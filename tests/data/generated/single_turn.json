@@ -1,0 +1,107 @@
+[
+  {
+    "id": "gen_001_account_security",
+    "input": "As a Pro admin securing my team, can I require 2FA for all members?",
+    "expected_output": "Yes. Workspace admins on Pro and above can require 2FA for all members.",
+    "expected_docs": [
+      "account_security"
+    ],
+    "context": [
+      "# Account Security\n\n## Two-factor authentication\n\nOrbitly supports two-factor authentication (2FA) using an authenticator app (such as Google Authenticator or 1Password) or SMS codes. SMS codes are not available in every country; an authenticator app is the recommended method. Workspace admins on Pro and above can require 2FA for all members.\n\n## Single sign-on (SSO)\n\nSAML 2.0 single sign-on is available on the Business and Enterprise plans. Supported identity providers include Okta, Microsoft Entra ID (Azure AD) and Google Workspace. SCIM user provisioning is available on Enterprise only.\n\n## Passwords\n\nPasswords must be at least 12 characters long. Orbitly staff will never ask for your password by email, chat or phone. To reset a password, use the \"Forgot password\" link on the sign-in page; the reset link expires after 1 hour.",
+      "\n\n## Sessions and lockout\n\nBy default, sessions stay signed in for 30 days. Admins on Business and Enterprise can set a session timeout anywhere between 1 hour and 90 days. After 10 consecutive failed sign-in attempts, the account is locked for 15 minutes.\n\n## Reporting a vulnerability\n\nSecurity issues can be reported to security@orbitly.example. Orbitly runs a responsible disclosure program and responds to reports within 2 business days.\n"
+    ],
+    "evolutions": [
+      "Hypothetical"
+    ]
+  },
+  {
+    "id": "gen_002_api_and_integrations",
+    "input": "How many days until Orbitly REST API personal access tokens expire?",
+    "expected_output": "Orbitly REST API personal access tokens expire after 90 days.",
+    "expected_docs": [
+      "api_and_integrations"
+    ],
+    "context": [
+      " and the workspace admins are emailed.\n\n## Native integrations\n\nOrbitly integrates natively with Slack, Microsoft Teams, GitHub, GitLab, Google Drive and Zapier. The GitHub and GitLab integrations link commits and pull requests to tasks when the task ID (for example ORB-123) appears in the commit message or branch name. Jira import is available as a one-time migration tool, not as a live sync.\n",
+      "# API and Integrations\n\n## REST API\n\nOrbitly offers a REST API (version 2) at https://api.orbitly.example/v2. Requests are authenticated with a personal access token sent in the Authorization header as a Bearer token. Personal access tokens expire after 90 days and can be revoked at any time from Settings > Developer.\n\n## Rate limits\n\nAPI rate limits depend on the plan: Free allows 60 requests per minute, Pro allows 300 requests per minute, Business allows 1,000 requests per minute and Enterprise limits are custom. When the limit is exceeded, the API returns HTTP 429 with a Retry-After header.\n\n## Webhooks\n\nWebhooks send an HTTP POST to your endpoint when tasks, projects or comments change. Your endpoint must respond with a 2xx status within 10 seconds. Failed deliveries are retried up to 5 times with exponential backoff over 24 hours, after which the webhook is disabled"
+    ],
+    "evolutions": [
+      "Concretizing"
+    ]
+  },
+  {
+    "id": "gen_003_billing_and_refunds",
+    "input": "How do workspace access and data retention compare during the payment grace period and after 14 days?",
+    "expected_output": "During the 14-day grace period, Orbitly retries the payment and sends email reminders. If payment remains unpaid after 14 days, the workspace becomes read-only until the balance is paid. Data is never deleted because of a failed payment.",
+    "expected_docs": [
+      "billing_and_refunds"
+    ],
+    "context": [
+      " than 3 active projects on Free), the extra projects become read-only.\n\n## Failed payments\n\nIf a payment fails, Orbitly retries the charge and sends email reminders during a 14-day grace period. If payment is still not received after 14 days, the workspace is switched to read-only mode until the balance is paid. Data is never deleted because of a failed payment.\n\n## Taxes and invoices\n\nPrices are shown excluding VAT and sales tax, which are added at checkout based on the billing address. Invoices can be downloaded from Settings > Billing > Invoice history.\n",
+      "# Billing and Refunds\n\n## Payment methods\n\nOrbitly accepts major credit and debit cards (Visa, Mastercard, American Express). Customers on annual Business or Enterprise plans with a yearly total above $5,000 can request to pay by invoice, with payment due within 30 days (net 30). PayPal and cryptocurrency are not accepted.\n\n## Refund policy\n\nAnnual subscriptions can be refunded in full if the cancellation request is made within 30 days of purchase. After 30 days, annual subscriptions are not refundable, but the plan remains active until the end of the paid term. Monthly subscriptions are never refunded; cancelling a monthly plan stops the next renewal.\n\n## Changing plans\n\nUpgrades take effect immediately and the price difference is prorated for the remainder of the billing period. Downgrades take effect at the start of the next billing period. If a downgrade puts a workspace above the new plan's limits (for example more"
+    ],
+    "evolutions": [
+      "Comparative"
+    ]
+  },
+  {
+    "id": "gen_004_data_retention_and_privacy",
+    "input": "For how many days can deleted Orbitly tasks, files, and projects be restored from Trash?",
+    "expected_output": "Deleted tasks, files, and projects can be restored from Trash for 30 days.",
+    "expected_docs": [
+      "data_retention_and_privacy"
+    ],
+    "context": [
+      "# Data Retention and Privacy\n\n## Deleted items\n\nDeleted tasks, files and projects move to the Trash, where they can be restored for 30 days. After 30 days, items in the Trash are permanently deleted.\n\n## Deleting a workspace\n\nWhen a workspace owner deletes a workspace, it can be restored by contacting support within 14 days. After 14 days, the workspace and all of its data are permanently deleted and cannot be recovered.\n\n## Backups\n\nOrbitly takes encrypted backups every 24 hours and keeps them for 35 days. Backups are used for disaster recovery only and cannot be used to restore individual items on request.\n\n## Data residency\n\nBy default, customer data is stored in the United States. Enterprise customers can choose to store data in the European Union (Frankfurt) or Australia (Sydney). Data residency cannot be changed on Free, Pro or Business plans.\n\n## Exporting data\n\nWorks",
+      "pace admins on any plan can export all workspace data at any time as JSON or CSV from Settings > Data > Export. Exports are emailed as a download link that is valid for 7 days.\n\n## GDPR\n\nOrbitly acts as a data processor for customer content and offers a Data Processing Agreement (DPA), which can be signed from Settings > Legal. Data subject requests can be sent to privacy@orbitly.example.\n"
+    ],
+    "evolutions": [
+      "Concretizing"
+    ]
+  },
+  {
+    "id": "gen_006_plans_and_pricing",
+    "input": "Can you compare Orbitly's plans, including pricing, limits, features, support, eligibility, discounts, and whether discounts can be combined?",
+    "expected_output": "| Plan | Pricing | Limits and features | Support |\n|---|---|---|---|\n| **Free** | Free | Up to 5 members, 3 active projects, and 1 GB of storage per workspace; no guests | Community forum |\n| **Pro** | $12/user/month billed annually, or $15 billed monthly | Unlimited projects and members, 100 GB storage per workspace, timeline views, custom fields, and up to 10 guests | Not specified |\n| **Business** | $24/user/month billed annually, or $29 billed monthly | Everything in Pro, plus SAML SSO, audit logs, time tracking, unlimited guests, and 1 TB storage per workspace | Not specified |\n| **Enterprise** | Custom pricing from the sales team; minimum 50 seats | Everything in Business, plus data residency options and a 99.95% uptime SLA | Dedicated customer success manager and 24/7 phone support |\n\n**Discounts and eligibility:** Registered nonprofits receive 50% off Pro and Business. Accredited educational institutions can use Pro free for classroom use. Discounts cannot be combined with other promotions.",
+    "expected_docs": [
+      "plans_and_pricing"
+    ],
+    "context": [
+      "# Plans and Pricing\n\nOrbitly is a project management platform for teams. It is offered in four plans: Free, Pro, Business and Enterprise.\n\n## Free plan\n\nThe Free plan costs nothing and is intended for small teams getting started. It supports up to 5 members per workspace, up to 3 active projects and 1 GB of total file storage. Guests cannot be invited on the Free plan. Support on the Free plan is limited to the community forum.\n\n## Pro plan\n\nThe Pro plan costs $12 per user per month when billed annually, or $15 per user per month when billed monthly. Pro includes unlimited projects, unlimited members, 100 GB of file storage per workspace, timeline (Gantt) views, custom fields and up to 10 guests per workspace.\n\n## Business plan\n\nThe Business plan costs $24 per user per month when billed annually, or $29 per user per month when billed monthly. Business includes everything in Pro,",
+      " plus SAML single sign-on (SSO), audit logs, time tracking, unlimited guests and 1 TB of file storage per workspace.\n\n## Enterprise plan\n\nEnterprise pricing is custom and quoted by the sales team. Enterprise includes everything in Business, plus data residency options, a dedicated customer success manager (CSM), 24/7 phone support and a 99.95% uptime SLA. Enterprise requires a minimum of 50 seats.\n\n## Discounts\n\nRegistered nonprofit organizations receive a 50% discount on Pro and Business plans. Accredited educational institutions can use the Pro plan for free for classroom use. Discounts cannot be combined with other promotions.\n"
+    ],
+    "evolutions": [
+      "Multi-context"
+    ]
+  },
+  {
+    "id": "gen_007_support_and_sla",
+    "input": "What are the Business and Enterprise uptime SLAs, service-credit amounts and caps, and deadlines for requesting credits?",
+    "expected_output": "Business uptime SLA is 99.9% monthly; Enterprise is 99.95%. If uptime falls below the applicable SLA, the credit is 10% of the monthly fee for each 0.1 percentage point below the SLA, capped at 50% of the monthly fee. Credits must be requested within 30 days after the affected month ends.",
+    "expected_docs": [
+      "support_and_sla"
+    ],
+    "context": [
+      " uptime, up to a maximum of 50% of the monthly fee. Credits must be requested within 30 days of the end of the affected month.\n\n## Status page\n\nCurrent system status and incident history are published at status.orbitly.example.\n",
+      "# Support and SLA\n\n## Support channels by plan\n\nFree plan users are supported through the community forum only. Pro customers get email support with a first response within 24 hours, Monday to Friday. Business customers get priority email and live chat support with a first response within 4 hours, 24 hours a day, 5 days a week. Enterprise customers get 24/7 phone support, a dedicated customer success manager, and a 1-hour first response for Severity 1 incidents.\n\n## Uptime SLA\n\nOrbitly guarantees 99.9% monthly uptime on the Business plan and 99.95% monthly uptime on the Enterprise plan. Free and Pro plans have no uptime SLA. Scheduled maintenance announced at least 48 hours in advance does not count as downtime.\n\n## Service credits\n\nIf monthly uptime falls below the SLA, customers receive a service credit of 10% of the monthly fee for each 0.1% below the guaranteed"
+    ],
+    "evolutions": [
+      "Comparative"
+    ]
+  },
+  {
+    "id": "gen_008_troubleshooting",
+    "input": "How can I troubleshoot missing Orbitly email notifications by checking my spam folder, Profile > Notifications, and allowing Orbitly’s sender?",
+    "expected_output": "Check your spam folder, confirm email notifications are enabled under **Profile > Notifications**, and allow emails from **notifications@orbitly.example** through your mail server.",
+    "expected_docs": [
+      "troubleshooting"
+    ],
+    "context": [
+      "# Troubleshooting\n\n## Notifications not arriving\n\nIf email notifications are not arriving, check your spam folder, then check Profile > Notifications to make sure email notifications are enabled. Make sure emails from notifications@orbitly.example are allowed by your mail server.\n\n## Desktop app not syncing\n\nIf the desktop app is not syncing, open Help > Reset local cache and restart the app. The desktop app is available for Windows 10 and later and macOS 13 and later.\n\n## Mobile app requirements\n\nThe Orbitly mobile app requires iOS 16 or later, or Android 10 or later. Offline mode on mobile lets you view and edit tasks; changes sync when you reconnect.\n\n## File upload limits\n\nThe maximum size for a single uploaded file is 25 MB on the Free plan and 250 MB on all paid plans. Uploads that exceed the limit fail with the error \"File too large\".\n\n## Locked out of your account\n\n",
+      "If you were locked out after too many failed sign-in attempts, wait 15 minutes and try again, or reset your password using the \"Forgot password\" link.\n"
+    ],
+    "evolutions": [
+      "Concretizing"
+    ]
+  }
+]
